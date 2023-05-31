@@ -1,4 +1,9 @@
+html, body {
+  background-color: transparent;
+}
+
 #root {
+  background-color: transparent;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
