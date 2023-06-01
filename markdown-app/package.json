@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@replit/codemirror-vim": "^6.0.14",
     "@uiw/codemirror-extensions-langs": "^4.20.2",
     "@uiw/codemirror-themes-all": "^4.20.2",
     "@uiw/react-codemirror": "^4.20.2",
