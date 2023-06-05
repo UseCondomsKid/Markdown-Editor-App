@@ -1,10 +1,13 @@
 import '../App.css'
-import ReactMarkdown from './ReactMarkdown'
+import MarkdownProvider from '../providers/markdown-provider'
+import Editor from './Editor'
 
 
 function App() {
   return (
-    <ReactMarkdown/>
+    <MarkdownProvider>
+      <Editor/>
+    </MarkdownProvider>
   )
 }
 
