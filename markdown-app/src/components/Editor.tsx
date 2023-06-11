@@ -5,7 +5,11 @@ import { gruvboxDark } from '@uiw/codemirror-themes-all';
 import { vim } from '@replit/codemirror-vim' 
 import { useMarkdown } from '../providers/markdown-provider';
 
-function Editor() {
+type EditorProps = {
+  toggleViewMode: () => void;
+};
+
+function Editor({ toggleViewMode }: EditorProps) {
 
     const [md, setMarkdown] = useMarkdown();
 
@@ -16,6 +20,7 @@ function Editor() {
 
     const extensions = [vim(), markdown({ base: markdownLanguage, codeLanguages: languages })];
     return (
+        <>
         <CodeMirror
             value={md}
             height="200px"
@@ -25,6 +30,8 @@ function Editor() {
                 updateMarkdown(editor);
             }}
         />
+        <button onClick={toggleViewMode}>Switch to Viewer</button>
+        </>
     )
 }
 
