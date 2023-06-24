@@ -22,6 +22,9 @@ function createWindow() {
   win = new BrowserWindow({
     // Make window transparent
     vibrancy: 'under-window',
+    width: 800,
+    height: 600,
+    title: 'Markdown Editor',
     visualEffectState: 'active',
     icon: path.join(process.env.PUBLIC, 'electron-vite.svg'),
     webPreferences: {
